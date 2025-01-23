@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Truncation with Ellipsis</title>
+</head>
+<body>
+    <h1>String Truncation Example</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Type your string here">
+    <br><br>
+    <label for="maxLength">Max Length:</label>
+    <input type="number" id="maxLength" placeholder="Enter max length">
+    <br><br>
+    <button onchange="truncateString()">Truncate</button>
+    <p id="result"></p>
+
+    <script>
+        function truncateString() {
+            const inputString = document.getElementById('inputString').value;
+            const maxLength = parseInt(document.getElementById('maxLength').value);
+
+            if (!inputString || isNaN(maxLength)) {
+                document.getElementById('result').innerText = "Please provide valid input and max length.";
+                return;
+            }
+
+            let truncated = inputString.length > maxLength
+                ? inputString.substring(0, maxLength - 3) + "..."
+                : inputString;
+
+            document.getElementById('result').innerText = "Truncated String: " + truncated;
+        }
+    </script>
+</body>
+</html>

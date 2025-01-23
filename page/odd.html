@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../JavaScript/odd.js"></script>
+</head>
+<body>
+    <p id="para"></p>
+
+    <button onclick="odd()">Odd </button>
+    <p id="result"></p>
+
+
+    <p id="Fibonacci"></p>
+    <button onclick="Fibonacci()">Generate Fibonacci Series</button>
+    <div id="result"></div>
+    
+
+    <div class="container">
+        <h2>Prime Number Checker</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number" required>
+        <button onclick="checkPrime()">Check if Prime</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    
+    <h2>Sum of Numbers from 15 to 25</h2>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <div id="result"></div>
+    <script>
+        function calculateSum() {
+            let sum = 0;
+            for (let i = 15; i <= 25; i++) {
+                sum += i;
+            }
+            document.getElementById("result").innerHTML = "The sum of numbers from 15 to 25 is: " + sum;
+        }
+    </script>
+</body>
+</html>

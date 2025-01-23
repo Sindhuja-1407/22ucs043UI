@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Two Arrays</title>
+</head>
+<body>
+    <h1>Combine Two Arrays</h1>
+    <label for="array1">Enter First Array (comma-separated):</label>
+    <input type="text" id="array1" placeholder="e.g., 1,2,3">
+    <br><br>
+    <label for="array2">Enter Second Array (comma-separated):</label>
+    <input type="text" id="array2" placeholder="e.g., 4,5,6">
+    <br><br>
+    <button onclick="combineArrays()">Combine</button>
+    <p id="result"></p>
+
+    <script>
+        function combineArrays() {
+            // Get input values
+            const array1 = document.getElementById('array1').value.split(',').map(item => item.trim());
+            const array2 = document.getElementById('array2').value.split(',').map(item => item.trim());
+
+            // Combine arrays
+            const combinedArray = [...array1, ...array2];
+
+            // Display result
+            document.getElementById('result').innerText = "Combined Array: [" + combinedArray.join(', ') + "]";
+        }
+    </script>
+</body>
+</html>

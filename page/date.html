@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date After 15 Days</title>
+</head>
+<body>
+  <h1>Find the Date After 15 Days</h1>
+  <p id="result">Click the button to find the date after 15 days.</p>
+  <button onclick="calculateFutureDate()">Get Date After 15 Days</button>
+
+  <script>
+    // JavaScript function to calculate and display the date after 15 days
+    function calculateFutureDate() {
+      const currentDate = new Date(); // Get the current date
+      const futureDate = new Date();
+      futureDate.setDate(currentDate.getDate() + 15); // Add 15 days
+      
+      // Format the result (optional)
+      const formattedDate = futureDate.toDateString();
+      
+      // Display the result in the <p> element
+      document.getElementById('result').textContent = `Date after 15 days: ${formattedDate}`;
+    }
+    function fun()
+    {
+        let opt=document.getElementById('Country').value;
+        alert(opt)
+    }
+  </script>
+  <select name="" id="Counrty" onchange="fun()">
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="America">America</option>
+    <option value="China">China</option>
+    <option value="Japan">Japan</option>
+    </select>
+</body>
+</html>

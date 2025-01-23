@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.section{
+    width: 100%;
+    height: 150px;
+    background-color: aqua;
+}
+.center{
+    width: 80%;
+    height: 150px;
+    background-color: blue;
+}
+.content{
+    width: 80%;
+    height: 150px;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+}
+.logo{
+    width: 30%;
+    height: 150px;
+    background-color: blueviolet;
+    float: left;
+}
+.menu{
+    width: 50%;
+    height: 150px;
+    background-color: blue;
+    float: right;
+}
+.row{
+    width: 90%;
+    height: 72px;
+    background-color: aquamarine;
+    float: left;
+    margin: 2px auto;
+}
+.column{
+    width: 32%;
+    height: 150px;
+    background-color: rgb(255, 127, 197);
+    margin-left:6px;
+    float: left;
+}
+.sub-col{
+    width: 47%;
+    height: 70PX;
+    background-color: rebeccapurple;
+    float: left;
+    margin-left: 5px;
+}

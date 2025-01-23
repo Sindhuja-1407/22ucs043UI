@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../JavaScript/string.js"></script>
+</head>
+<body>
+    <script>
+
+        function reverseWord()
+        {
+            let val=document.getElementById("data").value 
+            let result=val.split('').reverse().join() 
+            console.log(result);
+            document.getElementById('out').innerHTML=result
+
+        }
+
+
+        function reverseEachWord()
+        {
+            let val=document.getElementById("data").value 
+            let result=val.split('').reverse().join() 
+            console.log(result);
+            document.getElementById('out').innerHTML=result
+
+        }
+
+
+        function checkIfSameAfterReverse()
+        {
+            // Get the two input strings
+            const string1 = document.getElementById('string1').value;
+            const string2 = document.getElementById('string2').value;
+      
+            // Reverse both strings
+            const reversedString1 = string1.split('').reverse().join('');
+            const reversedString2 = string2.split('').reverse().join('');
+      
+             // Check if the reversed strings are equal
+            if (reversedString1 === reversedString2)
+            {
+                document.getElementById('result3').textContent = "The strings are the same after reverse!";
+            }
+            else
+            {
+                document.getElementById('result3').textContent = "The strings are NOT the same after reverse!";
+            }
+        }
+        
+        
+        function countVowels()
+        {
+            // Get the input string
+             const inputString = document.getElementById('inputString').value.trim();
+
+            // Initialize vowel count
+            let vowelCount = 0;
+
+            // Define vowels (both lowercase and uppercase)
+            const vowels = 'aeiouAEIOU';
+
+             // Loop through each character in the string
+            for (let i = 0; i < inputString.length; i++)
+            {
+            // Check if the character is a vowel
+            if (vowels.indexOf(inputString[i]) !== -1)
+            {
+            vowelCount++;
+        }
+    }
+    // Display the result
+    document.getElementById('result4').innerText = `Total vowels: ${vowelCount}`;
+}
+
+
+    function checkAnagram()
+    {
+      // Get input values and trim spaces
+      const str1 = document.getElementById('inputString1').value.trim();
+      const str2 = document.getElementById('inputString2').value.trim();
+
+      // Check if lengths are the same
+      if (str1.length !== str2.length)
+      {
+        document.getElementById('result').innerText = "No, the strings are not anagrams (different lengths).";
+        return;
+      }
+
+      // Sort both strings and compare them
+      const sortedStr1 = str1.split('').sort().join('');
+      const sortedStr2 = str2.split('').sort().join('');
+
+      // Compare sorted strings
+      if (sortedStr1 === sortedStr2)
+      {
+        document.getElementById('result5').innerText = "Yes, the strings are anagrams!";
+      }
+      else
+      {
+        document.getElementById('result5').innerText = "No, the strings are not anagrams.";
+      }
+    }
+    
+    </script>
+
+  <!-- given string to reverse  -->
+
+  <h1>String Reversal</h1>
+  <p>Enter a string to reverse it:</p>
+  <input type="text" id="inputText" placeholder="Type something here">
+  <button onclick="reverseString()">Reverse String</button>
+  <p id="result"></p>
+
+
+  <!-- Given sentence of each word to reversed  -->
+
+  <h1>sentence reverse</h1>
+  <input type="text" id="data">
+  <p id="out"></p>
+  <button onclick="reverseWord()">Reverse Word</button>
+  <button onclick="reverseEachWord()">Reverse Each Word</button>
+
+
+  <!-- Given two strings are same after reversing both -->
+
+  <h1>Check If Two Strings Are Same After Reverse</h1>
+  <p>Enter two strings to check if they are the same after reverse:</p>
+  <input type="text" id="string1" placeholder="Enter first string">
+  <br><br>
+  <input type="text" id="string2" placeholder="Enter second string">
+  <br><br>
+  <button onclick="checkIfSameAfterReverse()">Check</button>
+  <p id="result3"></p>
+
+
+  <!-- Print vowels count -->
+
+  <h1>Vowel Count in String</h1>
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString" placeholder="Type your string here...">
+  <br><br>
+  <button onclick="countVowels()">Count Vowels</button>
+
+  <div id="result4"></div>
+
+
+  <!-- print anagram of two sentence(rearangerd words) -->
+
+  <h1>Check if Two Strings are Anagrams</h1>
+  <label for="inputString1">Enter first string:</label>
+  <input type="text" id="inputString1" placeholder="First string...">
+  <br>
+  <label for="inputString2">Enter second string:</label>
+  <input type="text" id="inputString2" placeholder="Second string...">
+  <br><br>
+  <button onclick="checkAnagram()">Check Anagram</button>
+
+  <div id="result5"></div>
+  
+
+  <!-- <script>
+    function truncatestring(str,len)
+  {
+    if(str.length>len)
+  {
+    return '....'+ str.slice(0,length)
+  }
+  else
+  {
+    return str;
+  }
+  }
+  </script>
+  const originalString="This is long string"
+  const truntedstring=truncatestring(originalString) -->
+</body>
+</html>

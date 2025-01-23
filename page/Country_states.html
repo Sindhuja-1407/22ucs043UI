@@ -1,0 +1,74 @@
+<!-- function fun()
+    {
+        let opt=document.getElementById('Country').value;
+        alert(opt)
+    }
+  </script>
+  <select name="" id="Counrty" onchange="fun()">
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="America">America</option>
+    <option value="China">China</option>
+    <option value="Japan">Japan</option>
+    </select> -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country and States Dropdown</title>
+</head>
+<body>
+  <h1>Select Country and See Its States</h1>
+
+  <!-- Country Dropdown -->
+  <label for="country-select">Select Country:</label>
+  <select id="country-select">
+    <option value="">-- Select a Country --</option>
+  </select>
+
+  <!-- States Display -->
+  <div id="states-container" style="margin-top: 20px;">
+    <h2>States:</h2>
+    <ul id="states-list"></ul>
+  </div>
+
+  <script>
+    // Define countries and states
+    const countriesAndStates = {
+      USA: ['California', 'Texas', 'New York', 'Florida'],
+      India: ['Maharashtra', 'Karnataka', 'Tamil Nadu', 'Gujarat'],
+      Australia: ['New South Wales', 'Victoria', 'Queensland', 'Western Australia']
+    };
+
+    const countrySelect = document.getElementById('country-select');
+    const statesList = document.getElementById('states-list');
+
+    // Populate the country dropdown
+    Object.keys(countriesAndStates).forEach(country => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.textContent = country;
+      countrySelect.appendChild(option);
+    });
+
+    // Listen for country selection changes
+    countrySelect.addEventListener('change', () => {
+      const selectedCountry = countrySelect.value;
+
+      // Clear previous states
+      statesList.innerHTML = '';
+
+      if (selectedCountry) {
+        // Add states of the selected country
+        const states = countriesAndStates[selectedCountry];
+        states.forEach(state => {
+          const listItem = document.createElement('li');
+          listItem.textContent = state;
+          statesList.appendChild(listItem);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

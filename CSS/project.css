@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    width: 1000;
+    background-color: black;
+    overflow: auto;
+}
+.center{
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+}
+.phone, .email{
+    width: 35%;
+    color: white;
+    padding: 5px 0;
+}
+.phone{
+    float: left;
+}
+.email{
+    float: right;
+    text-align: right;
+}
+.bg{
+        width: 100%;
+        height: 30px;
+        background-color: aqua;
+}
+.inance{
+    width: 40%;
+    color: blue;
+    padding: 10px;
+    float: left;
+}
+.icons{
+    width: 40%;
+    color: blue;
+    padding: 10px;
+    float: left;
+    text-align: right;
+}
+.section{
+    width: 100%;
+    height: 500px;
+    background-color: aquamarine;
+}
+.img{
+    padding-top: 150px;
+    float: right;
+}
+.row{
+    padding-top: 100px;
+    width: 46%;
+    height: 400px;
+    margin: 10px 15px;
+    float: left;
+}
+.heading{
+    padding-top: 200px;
+    color: blueviolet;
+    text-align:left;
+    float: left;
+}
+.content{
+    width: 80%;
+    height: 10px;
+    color: blueviolet;
+    text-align:left;
+    float: left;
+}
+.button{
+    background-color: burlywood;
+    border: none;
+    color: rebeccapurple;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+  }
+.sub-head{
+    text-align: center;
+    color: orangered;
+}
+.row1{
+    width: 30%;
+    height: 300px;
+    background-color: blueviolet;
+    float: left;
+    margin: 10px 15px;
+    text-align: center;
+    text-shadow: royalblue;
+}
